@@ -155,7 +155,6 @@ public class SceneController : MonoBehaviour
             List<Letter> letters = w.GetLetters().Where(o => !o.IsStartUsed()).ToList();
             int r = rnd.Next(letters.Count);
             letters[r].Blink("start");
-            Debug.Log("Call Letter Blink");
         }
         catch (Exception ex)
         {

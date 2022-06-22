@@ -73,7 +73,6 @@ public class UIController : MonoBehaviour
             }
             else
             {
-                Debug.Log("Time has run out!");
                 OnChallengeStopped();
             }
         }
