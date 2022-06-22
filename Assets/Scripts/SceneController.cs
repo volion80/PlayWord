@@ -169,8 +169,5 @@ public class SceneController : MonoBehaviour
         
         todo.Add("Do not allow create multiple empty words?");
         todo.Add("Replace Stop Game button?");
-        
-        todo.Add("Update score calculation for All Letters depending on Start Word length applying a coef");
-        todo.Add("Add About popup content");
     }
 }
