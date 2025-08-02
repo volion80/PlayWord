@@ -36,13 +36,16 @@ public class ResultPopup : MonoBehaviour
     private GameObject _resultsContent;
 
     private float _resultWordHeight = 20f;
-    
-    void Start()
+
+    private void Awake()
     {
         GameObject controller = GameObject.Find("SceneController");
         _controller = controller.GetComponent<SceneController>();
         _resultsContent = GameObject.Find("ResultsContent");
+    }
 
+    void Start()
+    {
         allLettersCount.SetActive(false);
         longWordsCount.SetActive(false);
         totalScore.SetActive(false);

@@ -47,6 +47,7 @@ namespace SpriteParticleEmitter
 
         protected bool Initialize()
         {
+            return false;
             // initialize members
             if (_transform == null)
             {
@@ -124,9 +125,9 @@ namespace SpriteParticleEmitter
 
         protected override void Awake()
         {
-            base.Awake();
-            if (!Initialize())
-                enabled = false;
+            // base.Awake();
+            // if (!Initialize())
+            //     enabled = false;
         }
 
         
@@ -283,44 +284,44 @@ namespace SpriteParticleEmitter
 
         void Update()
         {
-            if (!fixedTime && Application.isPlaying)
-            {
-                pSystem.Simulate(Time.unscaledDeltaTime, false, false, true);
-                SetAllDirty();
-
-                if ((currentMaterial!= null && currentTexture != currentMaterial.mainTexture) ||
-                    (material!=null && currentMaterial != null && material.shader != currentMaterial.shader))
-                {
-                    pSystem = null;
-                    Initialize();
-                }
-            }
+            // if (!fixedTime && Application.isPlaying)
+            // {
+            //     pSystem.Simulate(Time.unscaledDeltaTime, false, false, true);
+            //     SetAllDirty();
+            //
+            //     if ((currentMaterial!= null && currentTexture != currentMaterial.mainTexture) ||
+            //         (material!=null && currentMaterial != null && material.shader != currentMaterial.shader))
+            //     {
+            //         pSystem = null;
+            //         Initialize();
+            //     }
+            // }
         }
 
         void LateUpdate()
         {
-            if (!Application.isPlaying)
-            {
-                SetAllDirty();
-            }
-            else
-            {
-                if (fixedTime)
-                {
-                    pSystem.Simulate(Time.unscaledDeltaTime, false, false, true);
-                    SetAllDirty();
-                    if ((currentMaterial != null && currentTexture != currentMaterial.mainTexture) ||
-                        (material != null && currentMaterial != null && material.shader != currentMaterial.shader))
-                    {
-                        pSystem = null;
-                        Initialize();
-                    }
-                }
-            }
-            if (material == currentMaterial) 
-                return;
-            pSystem = null;
-            Initialize();
+            // if (!Application.isPlaying)
+            // {
+            //     SetAllDirty();
+            // }
+            // else
+            // {
+            //     if (fixedTime)
+            //     {
+            //         pSystem.Simulate(Time.unscaledDeltaTime, false, false, true);
+            //         SetAllDirty();
+            //         if ((currentMaterial != null && currentTexture != currentMaterial.mainTexture) ||
+            //             (material != null && currentMaterial != null && material.shader != currentMaterial.shader))
+            //         {
+            //             pSystem = null;
+            //             Initialize();
+            //         }
+            //     }
+            // }
+            // if (material == currentMaterial) 
+            //     return;
+            // pSystem = null;
+            // Initialize();
         }
     }
 #endif

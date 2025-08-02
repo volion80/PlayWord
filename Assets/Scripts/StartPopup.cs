@@ -68,7 +68,7 @@ public class StartPopup : MonoBehaviour
     private void ResetInputs()
     {
         startWordInput.GetComponentInChildren<InputField>().text = "";
-        timerInput.GetComponentInChildren<InputField>().text = "0";
+        timerInput.GetComponentInChildren<InputField>().text = "60";
     }
 
     public bool IsTextInputInFocus()

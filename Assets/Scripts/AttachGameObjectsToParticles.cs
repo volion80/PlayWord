@@ -21,10 +21,10 @@ public class AttachGameObjectsToParticles : MonoBehaviour
     void LateUpdate()
     {
         int count = m_ParticleSystem.GetParticles(m_Particles);
-
+    
         while (m_Instances.Count < count)
             m_Instances.Add(Instantiate(m_Prefab, m_ParticleSystem.transform));
-
+    
         bool worldSpace = (m_ParticleSystem.main.simulationSpace == ParticleSystemSimulationSpace.World);
         for (int i = 0; i < m_Instances.Count; i++)
         {

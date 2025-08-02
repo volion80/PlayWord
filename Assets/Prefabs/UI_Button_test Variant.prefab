@@ -245,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2559378821698687853, guid: 47cc620ac9abefa47a7ec540b1091550, type: 3}
       propertyPath: m_Name
-      value: UI_Button_test
+      value: UI_Button_test Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3488007477951914788, guid: 47cc620ac9abefa47a7ec540b1091550, type: 3}
       propertyPath: m_IsActive
